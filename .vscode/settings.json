@@ -1,0 +1,45 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "extensions.ignoreRecommendations": false,
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "editor.formatOnSave": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "selection",
+    "editor.rulers": [
+        88
+    ],
+    "http.proxy": "your_proxy",
+    "git.fetchOnPull": true,
+    "git.enableSmartCommit": true,
+    "git.showPushSuccessNotification": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.terminal.activateEnvironment": false,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.linting.pylintArgs": [
+        "--disable=C,R,W"
+    ],
+    "python.formatting.provider": "black",
+    "autoDocstring.docstringFormat": "google",
+    "yaml.format.enable": true,
+    "yaml.format.bracketSpacing": false,
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "remote.SSH.remotePlatform": {
+        "your_vm": "linux"
+    },
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "crates.upToDateDecorator": "✔️",
+}
