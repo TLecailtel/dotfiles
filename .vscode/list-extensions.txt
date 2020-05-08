@@ -1,0 +1,24 @@
+# this list was obtained with the command: code --list-extensions
+# to install one (e.g. python), use the command: code --install-extension ms-python.python
+
+aeschli.vscode-css-formatter
+ban.spellright
+bierner.markdown-mermaid
+bungcip.better-toml
+christian-kohler.path-intellisense
+CoenraadS.bracket-pair-colorizer-2
+EditorConfig.EditorConfig
+mechatroner.rainbow-csv
+ms-azuretools.vscode-docker
+ms-python.python
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.remote-wsl
+njpwerner.autodocstring
+redhat.vscode-yaml
+rust-lang.rust
+serayuzgur.crates
+vscode-icons-team.vscode-icons
+waderyan.gitblame
+yzhang.markdown-all-in-one
+zxh404.vscode-proto3
