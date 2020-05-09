@@ -25,7 +25,7 @@
   "python.linting.pylintEnabled": true,
   "python.linting.pylintUseMinimalCheckers": false,
   "python.linting.pylintArgs": [
-    "--disable=C,R,W"
+    "--disable=C"
   ],
   "python.formatting.provider": "black",
   "autoDocstring.docstringFormat": "google",
