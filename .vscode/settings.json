@@ -2,6 +2,8 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": 0,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.shell.linux": "/bin/zsh",
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "vscode-icons",
