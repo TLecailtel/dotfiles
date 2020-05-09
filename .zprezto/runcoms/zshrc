@@ -27,8 +27,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# custom alias
+# custom aliases
 alias myip="curl ifconfig.me; echo"
+alias fd=fdfind
+alias rg="nocorrect rg"
 
 # custom functions
 mkcd () {
