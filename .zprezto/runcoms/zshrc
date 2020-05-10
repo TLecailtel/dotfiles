@@ -27,9 +27,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# add ~/bin to $PATH
+export PATH=$PATH:~/bin
+
 # custom aliases
 alias myip="curl ifconfig.me; echo"
-alias fd=fdfind
 alias rg="nocorrect rg"
 
 # custom functions
@@ -42,7 +44,7 @@ update_dns () {
 }
 
 set_proxy () {
-    export http_proxy=your_proxy;
+    export http_proxy=http://your_proxy;
     export https_proxy=$http_proxy;
 }
 

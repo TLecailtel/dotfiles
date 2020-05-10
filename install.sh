@@ -1,12 +1,10 @@
-# 1) Install zsh
-
+# Install zsh
 sudo apt install zsh  # Ubuntu
 # sudo yum install zsh  # CentOS
 chsh -s /bin/zsh
 
 
-# 2) Install prezto
-
+# Install prezto
 zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
@@ -15,13 +13,35 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 
-# 3) Install fd
+# Install VS Code Server
+code .
 
-sudo apt install fd-find  # Ubuntu
+
+# Install shellcheck
+sudo apt install shellcheck
 
 
-# 4) Install ripgrep
+# Install gcc
+sudo apt install build-essential  # Ubuntu
 
+
+# Install tldr
+mkdir -p ~/bin
+curl -o ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
+chmod +x ~/bin/tldr
+
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  # WSL2
+# curl https://sh.rustup.rs -sSf | sh  # UNIX
+
+
+# Install broot
+cargo install broot
+broot
+
+
+# Install ripgrep
 sudo apt install ripgrep  # Ubuntu
 # sudo yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo  # CentOS
 # sudo yum install ripgrep  # CentOS
