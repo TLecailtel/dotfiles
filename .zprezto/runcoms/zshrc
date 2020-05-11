@@ -39,10 +39,6 @@ mkcd () {
     mkdir -p "$1"; cd "$1"
 }
 
-update_dns () {
-    sudo sed -i  -E 's/(^nameserver 192)/# \1/g' /etc/resolv.conf
-}
-
 set_proxy () {
     export http_proxy=http://your_proxy;
     export https_proxy=$http_proxy;
