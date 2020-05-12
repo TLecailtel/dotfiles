@@ -45,3 +45,10 @@ broot
 sudo apt install ripgrep  # Ubuntu
 # sudo yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo  # CentOS
 # sudo yum install ripgrep  # CentOS
+
+
+# Install Python with Anaconda
+ANACONDA_INSTALLER="Anaconda3-2020.02-Linux-x86_64.sh"
+wget "https://repo.continuum.io/archive/$ANACONDA_INSTALLER"
+bash $ANACONDA_INSTALLER
+rm $ANACONDA_INSTALLER
