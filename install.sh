@@ -34,6 +34,7 @@ chmod +x ~/bin/tldr
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  # WSL2
 # curl https://sh.rustup.rs -sSf | sh  # UNIX
+rustup component add rls rust-analysis rust-src
 
 
 # Install broot
