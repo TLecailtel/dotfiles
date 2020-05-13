@@ -18,6 +18,7 @@ njpwerner.autodocstring
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
+tht13.html-preview-vscode
 timonwong.shellcheck
 vscode-icons-team.vscode-icons
 waderyan.gitblame
