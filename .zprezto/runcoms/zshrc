@@ -27,6 +27,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# show hidden files in zsh completion
+compinit
+_comp_options+=(globdots)
+
 # add ~/bin to $PATH
 export PATH=$PATH:~/bin
 
