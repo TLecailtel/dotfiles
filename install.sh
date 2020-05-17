@@ -16,6 +16,10 @@ done
 code .
 
 
+# Install tree
+sudo apt install tree
+
+
 # Install shellcheck
 sudo apt install shellcheck
 
@@ -38,6 +42,10 @@ rustup component add rls rust-analysis rust-src
 
 # Install ripgrep
 sudo apt install ripgrep
+
+
+# Install fd
+sudo apt install fd-find
 
 
 # Install Python with Anaconda

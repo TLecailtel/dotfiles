@@ -67,8 +67,7 @@ _comp_options+=(globdots)
 # add ~/bin to $PATH
 export PATH=$PATH:~/bin
 
-# force zsh not to correct the rg command
-alias rg="nocorrect rg"
+alias fd=fdfind
 
 set_proxy () {
     export http_proxy=http://your_proxy;
