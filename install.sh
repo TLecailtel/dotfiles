@@ -1,6 +1,5 @@
 # Install zsh
-sudo apt install zsh  # Ubuntu
-# sudo yum install zsh  # CentOS
+sudo apt install zsh
 chsh -s /bin/zsh
 
 
@@ -21,8 +20,8 @@ code .
 sudo apt install shellcheck
 
 
-# Install gcc
-sudo apt install build-essential  # Ubuntu
+# Install nnn
+sudo apt install nnn
 
 
 # Install tldr
@@ -37,15 +36,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  # WSL2
 rustup component add rls rust-analysis rust-src
 
 
-# Install broot
-cargo install broot
-broot
-
-
 # Install ripgrep
-sudo apt install ripgrep  # Ubuntu
-# sudo yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo  # CentOS
-# sudo yum install ripgrep  # CentOS
+sudo apt install ripgrep
 
 
 # Install Python with Anaconda

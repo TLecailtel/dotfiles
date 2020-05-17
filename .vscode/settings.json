@@ -15,6 +15,10 @@
   "editor.rulers": [
     88
   ],
+  "files.associations": {
+    "zshrc": "shellscript",
+    "zpreztorc": "shellscript"
+  },
   "http.proxy": "http://your_proxy",
   "git.fetchOnPull": true,
   "git.enableSmartCommit": true,
