@@ -78,3 +78,9 @@ unset_proxy () {
     unset http_proxy;
     unset https_proxy;
 }
+
+# use less with colorization, and keep 4 lines overlapping when scrolling
+export LESS='--ignore-case --RAW-CONTROL-CHARS --window=-4'
+if type pygmentize >/dev/null 2>&1; then
+    export LESSOPEN='|pygmentize %s'
+fi
