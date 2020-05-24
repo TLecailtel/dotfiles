@@ -16,8 +16,9 @@
     88
   ],
   "files.associations": {
-    "zshrc": "shellscript",
-    "zpreztorc": "shellscript"
+    "zpreztorc": "shellscript",
+    "zprofile": "shellscript",
+    "zshrc": "shellscript"
   },
   "http.proxy": "http://your_proxy",
   "git.fetchOnPull": true,
