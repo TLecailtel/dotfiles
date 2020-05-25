@@ -12,6 +12,14 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 
+# Install lesspipe
+sudo apt install fastjar hdf5-tools html2text imagemagick libreoffice mediainfo p7zip-full poppler-utils rar unrar unzip zip
+git clone https://github.com/wofr06/lesspipe.git
+cd lesspipe
+./configure
+sudo cp lesspipe.sh code2color /usr/local/bin
+
+
 # Install VS Code Server
 code .
 
