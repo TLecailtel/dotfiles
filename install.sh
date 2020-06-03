@@ -12,6 +12,11 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 
+# Install brew
+sudo apt-get install build-essential
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+
 # Install lesspipe
 sudo apt install fastjar hdf5-tools html2text imagemagick libreoffice mediainfo p7zip-full poppler-utils rar unrar unzip zip
 git clone https://github.com/wofr06/lesspipe.git
@@ -46,6 +51,7 @@ chmod +x ~/bin/tldr
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  # WSL2
 # curl https://sh.rustup.rs -sSf | sh  # UNIX
 rustup component add rls rust-analysis rust-src
+sudo apt install pkg-config libssl-dev
 
 
 # Install ripgrep
@@ -61,3 +67,7 @@ ANACONDA_INSTALLER="Anaconda3-2020.02-Linux-x86_64.sh"
 wget "https://repo.continuum.io/archive/$ANACONDA_INSTALLER"
 bash $ANACONDA_INSTALLER
 rm $ANACONDA_INSTALLER
+
+
+# Install k9s
+brew install derailed/k9s/k9s

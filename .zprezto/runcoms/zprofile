@@ -66,4 +66,5 @@ if type lesspipe.sh > /dev/null 2>&1; then
   export LESSOPEN='| lesspipe.sh %s'
 fi
 
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 export PATH="$HOME/.cargo/bin:$PATH"
