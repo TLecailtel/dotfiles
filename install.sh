@@ -51,7 +51,7 @@ chmod +x ~/bin/tldr
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  # WSL2
 # curl https://sh.rustup.rs -sSf | sh  # UNIX
 rustup component add rls rust-analysis rust-src
-sudo apt install pkg-config libssl-dev
+sudo apt install pkg-config libssl-dev cmake libclang
 
 
 # Install ripgrep
@@ -71,3 +71,7 @@ rm $ANACONDA_INSTALLER
 
 # Install k9s
 brew install derailed/k9s/k9s
+
+
+# Install kubectl prompt
+curl -O https://raw.githubusercontent.com/superbrothers/zsh-kubectl-prompt/master/kubectl.zsh
