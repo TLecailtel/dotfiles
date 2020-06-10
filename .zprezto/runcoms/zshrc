@@ -64,9 +64,14 @@ alias n="n -neHA"
 compinit
 _comp_options+=(globdots)
 
+# add kubectl context & namespace to prompt
+autoload -U colors; colors
+source ~/kubectl.zsh
+
 # add ~/bin to $PATH
 export PATH=$PATH:~/bin
 
+# use fd alias for fdfind
 alias fd=fdfind
 
 set_proxy () {
