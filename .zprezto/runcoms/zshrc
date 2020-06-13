@@ -57,8 +57,8 @@ n ()
     fi
 }
 
-# use nnn with nav-as-you-type mode, text in $VISUAL, show hidden files, no dir auto-select
-alias n="n -neHA"
+# use nnn with text in $VISUAL, copy selected filepaths to clipboard & show notis on cp/mv/rm, show hidden files
+alias n="n -exH"
 
 # show hidden files in zsh completion
 compinit
@@ -73,6 +73,11 @@ export PATH=$PATH:~/bin
 
 # use fd alias for fdfind
 alias fd=fdfind
+
+# confirmation prompt
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
 
 set_proxy () {
     export http_proxy=http://your_proxy;
