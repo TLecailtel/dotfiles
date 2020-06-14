@@ -76,3 +76,8 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" Custom config
+:set hlsearch " highlight search matches
+let g:molokai_original = 1
+colorscheme molokai
