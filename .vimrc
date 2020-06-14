@@ -79,5 +79,10 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Custom config
 :set hlsearch " highlight search matches
-let g:molokai_original = 1
-colorscheme molokai
+
+call plug#begin()
+Plug 'crusoexia/vim-monokai'
+Plug 'rust-lang/rust.vim'
+call plug#end()
+
+colorscheme monokai

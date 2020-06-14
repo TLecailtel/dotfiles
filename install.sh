@@ -29,6 +29,10 @@ sudo cp lesspipe.sh code2color /usr/local/bin
 code .
 
 
+# Install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
 # Install tree
 sudo apt install tree
 
