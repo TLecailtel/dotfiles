@@ -1,16 +1,41 @@
 " Config largely copied from https://github.com/anishathalye/dotfiles/ and https://github.com/JJGO/dotfiles/
 
 set nocompatible " Not vi compatible
+let mapleader=" " " Leader key is space
 
 "----------------------
 " Plugins with vim-plug
 "----------------------
 
 call plug#begin()
-Plug 'editorconfig/editorconfig-vim'
-Plug 'itchyny/lightline.vim'
-Plug 'crusoexia/vim-monokai'
-Plug 'rust-lang/rust.vim'
+
+" Search
+Plug 'haya14busa/incsearch.vim' " Better incremental search
+Plug 'haya14busa/incsearch-easymotion.vim' " Integration between incsearch and easymotion plugins, using <Leader>/
+Plug 'romainl/vim-cool' " Disable highlight when search is done
+
+" Filetype support
+Plug 'editorconfig/editorconfig-vim' " Editorconfig support
+Plug 'mechatroner/rainbow_csv' " CSV color coding
+Plug 'rust-lang/rust.vim' " Rust support
+
+" GUI
+Plug 'yggdroot/indentline' " Show indentation levels
+Plug 'itchyny/lightline.vim' " Better status line
+Plug 'luochen1990/rainbow' " Colorize parenthesis & html tag pairs
+Plug 'machakann/vim-highlightedyank' " Highlight yanks
+Plug 'andymass/vim-matchup' " Highlight corresponding blocks e.g. if - fi in bash
+Plug 'crusoexia/vim-monokai' " Monokai colorscheme
+
+" Editor
+Plug 'preservim/nerdcommenter' " Comment lines using <Leader>cc
+Plug 'terryma/vim-multiple-cursors' " Multiple cursors like Sublime Text, using <C-n>
+Plug 'tpope/vim-surround' " Operations on surroundings (parentheses, quotes, ...), using s
+
+" Navigation
+Plug 'preservim/nerdtree' " File explorer
+Plug 'easymotion/vim-easymotion' " Faster navigation with dynamic keybindings, using <Leader><Leader> as a prefix
+
 call plug#end()
 
 
@@ -28,23 +53,35 @@ set softtabstop=4
 set autoindent
 
 
-"------
-"Search
-"------
+"-------
+" Search
+"-------
 
 set ignorecase " Ignore case in searches by default
 set smartcase " Make searches case sensitive if an uppercase is entered
+let g:EasyMotion_smartcase = 1 " For EasyMotion plugin, make searches case sensitive if an uppercase is entered
 set incsearch " Incremental search, as string is being typed
 set hlsearch " Highlight search matches
 
+" incsearch plugin
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
-"---
-" UI
-"---
+" incsearch-easymotion plugin
+map <Leader>/ <Plug>(incsearch-easymotion-/)
+map <Leader>? <Plug>(incsearch-easymotion-?)
+map <Leader>g/ <Plug>(incsearch-easymotion-stay)
+
+
+"----
+" GUI
+"----
 
 set number " Show line numbers
 set relativenumber " Show relative line numbers
-nnoremap <C-n> :set rnu!<CR> " Toggle relative numbering
+nnoremap <Leader>n :set rnu!<CR> " Toggle relative numbering
+set listchars=nbsp:¬,extends:»,precedes:«,trail:• " Show hidden characters
 set linebreak " Have lines wrap instead of continue off-screen
 set laststatus=2 " Show the status line at the bottom
 set scrolloff=5 " Show lines above and below cursor (when possible)
@@ -58,6 +95,8 @@ set noshowmode " Hide mode (unnecessary because of lightline)
 " Edition
 "--------
 
+set autoread " Set to auto read when a file is changed from the outside
+au FocusGained,BufEnter * checktime
 set nojoinspaces " Don't insert space when joining two lines
 set backspace=indent,eol,start " Allow backspacing over everything
 set wildmode=longest,list " Tab completion for files/bufferss
@@ -68,36 +107,19 @@ set undodir=~/.vim/undodir
 set hidden " Allow having hidden buffers
 set lazyredraw " Don't redraw while executing macros
 set noerrorbells visualbell t_vb= " Disable audible bell
+nmap <Leader>w :w<CR> " Quick write
+nmap <Leader>q :q<CR> " Quick quit
 
 
-"-----------
-" Navigation
-"-----------
+"-----------------------
+" Navigation and windows
+"-----------------------
 
 set mouse+=a " Enable mouse mode (scrolling, selection, etc)
 
-" Disable arrow navigation in normal mode
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-
-" Disable arrow navigation in insert mode
-inoremap <Left>  :echoe "Use h"<CR>
-inoremap <Right> :echoe "Use l"<CR>
-inoremap <Up>    :echoe "Use k"<CR>
-inoremap <Down>  :echoe "Use j"<CR>
-
-" Disable arrow navigation in visual mode
-vnoremap <Left>  :echoe "Use h"<CR>
-vnoremap <Right> :echoe "Use l"<CR>
-vnoremap <Up>    :echoe "Use k"<CR>
-vnoremap <Down>  :echoe "Use j"<CR>
-
-
-"------------------
-" Window navigation
-"------------------
+" NERDtree plugin
+nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
 
 " Open new split panes to right and bottom
 set splitbelow
@@ -117,9 +139,27 @@ augroup CursorLineOnlyInActiveWindow
 augroup END
 
 
-"-------
-" Unbind
-"-------
+"-----------
+" Unbindings
+"-----------
+
+" Disable arrow navigation in normal mode
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+
+" Disable arrow navigation in insert mode
+inoremap <Left>  :echoe "Use h"<CR>
+inoremap <Right> :echoe "Use l"<CR>
+inoremap <Up>    :echoe "Use k"<CR>
+inoremap <Down>  :echoe "Use j"<CR>
+
+" Disable arrow navigation in visual mode
+vnoremap <Left>  :echoe "Use h"<CR>
+vnoremap <Right> :echoe "Use l"<CR>
+vnoremap <Up>    :echoe "Use k"<CR>
+vnoremap <Down>  :echoe "Use j"<CR>
 
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 map <C-a> <Nop> " Unbind for tmux
