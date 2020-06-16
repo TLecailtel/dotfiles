@@ -41,6 +41,10 @@ sudo apt install tree
 sudo apt install shellcheck
 
 
+# Install jq
+sudo apt install jq
+
+
 # Install nnn
 sudo apt install nnn
 
