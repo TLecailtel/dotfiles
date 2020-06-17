@@ -28,7 +28,7 @@ Plug 'andymass/vim-matchup' " Highlight corresponding blocks e.g. if - fi in bas
 Plug 'crusoexia/vim-monokai' " Monokai colorscheme
 
 " Editor
-Plug 'preservim/nerdcommenter' " Comment lines using <Leader>cc
+Plug 'preservim/nerdcommenter' " Comment/uncomment lines using <Leader>c<Space>
 Plug 'terryma/vim-multiple-cursors' " Multiple cursors like Sublime Text, using <C-n>
 Plug 'tpope/vim-surround' " Operations on surroundings (parentheses, quotes, ...), using s
 
@@ -107,6 +107,7 @@ set undodir=~/.vim/undodir
 set hidden " Allow having hidden buffers
 set lazyredraw " Don't redraw while executing macros
 set noerrorbells visualbell t_vb= " Disable audible bell
+let g:NERDSpaceDelims = 1 " Add space after comment delimiters
 nmap <Leader>w :w<CR> " Quick write
 nmap <Leader>q :q<CR> " Quick quit
 
