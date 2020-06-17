@@ -29,6 +29,7 @@ Plug 'crusoexia/vim-monokai' " Monokai colorscheme
 
 " Editor
 Plug 'preservim/nerdcommenter' " Comment/uncomment lines using <Leader>c<Space>
+Plug 'matze/vim-move' " Move line/selection using <A-j> and <A-k>
 Plug 'terryma/vim-multiple-cursors' " Multiple cursors like Sublime Text, using <C-n>
 Plug 'tpope/vim-surround' " Operations on surroundings (parentheses, quotes, ...), using s
 
@@ -80,7 +81,6 @@ map <Leader>g/ <Plug>(incsearch-easymotion-stay)
 
 set number " Show line numbers
 set relativenumber " Show relative line numbers
-nnoremap <Leader>n :set rnu!<CR> " Toggle relative numbering
 set listchars=nbsp:¬,extends:»,precedes:«,trail:• " Show hidden characters
 set linebreak " Have lines wrap instead of continue off-screen
 set laststatus=2 " Show the status line at the bottom
@@ -90,6 +90,8 @@ set showmatch " Show matching braces when text indicator is over them
 set shortmess+=I " Disable startup message
 set noshowmode " Hide mode (unnecessary because of lightline)
 
+" Toggle relative numbering
+nnoremap <Leader>n :set rnu!<CR>
 
 "--------
 " Edition
@@ -108,8 +110,12 @@ set hidden " Allow having hidden buffers
 set lazyredraw " Don't redraw while executing macros
 set noerrorbells visualbell t_vb= " Disable audible bell
 let g:NERDSpaceDelims = 1 " Add space after comment delimiters
-nmap <Leader>w :w<CR> " Quick write
-nmap <Leader>q :q<CR> " Quick quit
+
+" Quick write
+nmap <Leader>w :w<CR>
+
+" Quick quit
+nmap <Leader>q :q<CR>
 
 
 "-----------------------
@@ -162,6 +168,9 @@ vnoremap <Right> :echoe "Use l"<CR>
 vnoremap <Up>    :echoe "Use k"<CR>
 vnoremap <Down>  :echoe "Use j"<CR>
 
-nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
-map <C-a> <Nop> " Unbind for tmux
+" 'Q' in normal mode enters Ex mode. You almost never want this.
+nmap Q <Nop>
+
+" Unbind for tmux
+map <C-a> <Nop>
 map <C-x> <Nop>
