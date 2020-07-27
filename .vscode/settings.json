@@ -26,6 +26,7 @@
   "git.enableSmartCommit": true,
   "git.showPushSuccessNotification": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "python.showStartPage": false,
   "python.terminal.activateEnvironment": false,
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
@@ -34,6 +35,7 @@
     "--disable=C"
   ],
   "python.formatting.provider": "black",
+  "python.dataScience.askForKernelRestart": false,
   "autoDocstring.docstringFormat": "google",
   "yaml.format.enable": true,
   "yaml.format.bracketSpacing": false,

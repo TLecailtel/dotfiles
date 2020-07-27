@@ -111,10 +111,8 @@ set lazyredraw " Don't redraw while executing macros
 set noerrorbells visualbell t_vb= " Disable audible bell
 let g:NERDSpaceDelims = 1 " Add space after comment delimiters
 
-" Quick write
+" Quick save/quit
 nmap <Leader>w :w<CR>
-
-" Quick quit
 nmap <Leader>q :q<CR>
 
 
