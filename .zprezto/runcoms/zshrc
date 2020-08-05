@@ -27,6 +27,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# activate kubectl auto-completion for zsh
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
 # configure cd on quit for nnn when ^g is pressed
 n ()
 {
