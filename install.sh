@@ -41,6 +41,10 @@ sudo apt install tree
 sudo apt install shellcheck
 
 
+# Install colordiff
+sudo apt install colordiff
+
+
 # Install jq
 sudo apt install jq
 

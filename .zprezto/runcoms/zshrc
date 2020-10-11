@@ -77,6 +77,9 @@ export PATH=$PATH:~/bin
 # use fd alias for fdfind
 alias fd=fdfind
 
+# make diff look like git diff
+alias diff="colordiff -u"
+
 # confirmation prompt
 alias cp="cp -i"
 alias mv="mv -i"
