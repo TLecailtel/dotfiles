@@ -27,6 +27,7 @@
   "git.enableSmartCommit": true,
   "git.showPushSuccessNotification": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "python.terminal.activateEnvironment": false,
   "python.showStartPage": false,
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
