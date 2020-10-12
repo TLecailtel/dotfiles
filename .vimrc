@@ -28,6 +28,7 @@ Plug 'andymass/vim-matchup' " Highlight corresponding blocks e.g. if - fi in bas
 Plug 'crusoexia/vim-monokai' " Monokai colorscheme
 
 " Editor
+Plug 'jiangmiao/auto-pairs' " Automatically append closing brackets, parentheses, quotes, ...
 Plug 'preservim/nerdcommenter' " Comment/uncomment lines using <Leader>c<Space>
 Plug 'matze/vim-move' " Move line/selection using <A-j> and <A-k>
 Plug 'terryma/vim-multiple-cursors' " Multiple cursors like Sublime Text, using <C-n>
@@ -44,6 +45,7 @@ call plug#end()
 " Syntax and indent
 "------------------
 
+set encoding=utf8
 filetype plugin indent on " Enable file type detection
 syntax on " Turn on syntax highlighting
 colorscheme monokai
@@ -172,3 +174,4 @@ nmap Q <Nop>
 " Unbind for tmux
 map <C-a> <Nop>
 map <C-x> <Nop>
+
