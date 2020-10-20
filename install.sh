@@ -13,7 +13,7 @@ done
 
 
 # Install brew
-sudo apt-get install build-essential
+sudo apt install build-essential
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 

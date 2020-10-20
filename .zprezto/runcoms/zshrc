@@ -115,9 +115,11 @@ up() {
 set_proxy () {
     export http_proxy=http://your_proxy;
     export https_proxy=$http_proxy;
+    echo "http_proxy and https_proxy set to: $http_proxy"
 }
 
 unset_proxy () {
     unset http_proxy;
     unset https_proxy;
+    echo "http_proxy and https_proxy successfully unset"
 }
