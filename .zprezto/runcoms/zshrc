@@ -74,9 +74,6 @@ source ~/kubectl.zsh
 # add ~/bin to $PATH
 export PATH=$PATH:~/bin
 
-# use fd alias for fdfind
-alias fd=fdfind
-
 # make diff look like git diff
 alias diff="colordiff -u"
 
@@ -84,6 +81,11 @@ alias diff="colordiff -u"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+
+mvr () {
+    # reverse mv
+    mv $2 $1
+}
 
 # Create a directory and cd into it
 mcd() {

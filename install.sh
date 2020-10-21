@@ -34,19 +34,19 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 
 # Install tree
-sudo apt install tree
+brew install tree
 
 
 # Install shellcheck
-sudo apt install shellcheck
+brew install shellcheck
 
 
 # Install colordiff
-sudo apt install colordiff
+brew install colordiff
 
 
 # Install jq
-sudo apt install jq
+brew install jq
 
 
 # Install nnn
@@ -54,9 +54,7 @@ sudo apt install nnn
 
 
 # Install tldr
-mkdir -p ~/bin
-curl -o ~/bin/tldr https://raw.githubusercontent.com/raylee/tldr/master/tldr
-chmod +x ~/bin/tldr
+brew install tldr
 
 
 # Install Rust
@@ -67,11 +65,11 @@ sudo apt install pkg-config libssl-dev cmake libclang
 
 
 # Install ripgrep
-sudo apt install ripgrep
+brew install ripgrep
 
 
 # Install fd
-sudo apt install fd-find
+brew install fd
 
 
 # Install Python with Anaconda
