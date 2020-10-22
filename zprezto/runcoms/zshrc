@@ -62,13 +62,13 @@ n ()
 
 export NNN_PLUG='p:preview-tui'
 export NNN_FIFO='/tmp/nnn.fifo'
+export NNN_OPENER='bat'
 
 # use nnn with the following options:
-# * text in $VISUAL,
+# * use NNN_OPENER, and assume it has only CLI utilities
 # * copy selected filepaths to clipboard & show notis on cp/mv/rm,
 # * show hidden files
-# * run plugins
-alias n='n -exH'
+alias n='n -cxH'
 
 # show hidden files in zsh completion
 compinit
