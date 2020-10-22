@@ -45,7 +45,8 @@ brew install jq
 
 
 # Install nnn
-sudo apt install nnn
+brew install nnn
+curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
 
 
 # Install tldr

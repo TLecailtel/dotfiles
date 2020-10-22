@@ -60,8 +60,15 @@ n ()
     fi
 }
 
-# use nnn with text in $VISUAL, copy selected filepaths to clipboard & show notis on cp/mv/rm, show hidden files
-alias n="n -exH"
+export NNN_PLUG='p:preview-tui'
+export NNN_FIFO='/tmp/nnn.fifo'
+
+# use nnn with the following options:
+# * text in $VISUAL,
+# * copy selected filepaths to clipboard & show notis on cp/mv/rm,
+# * show hidden files
+# * run plugins
+alias n='n -exH'
 
 # show hidden files in zsh completion
 compinit
