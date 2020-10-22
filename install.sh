@@ -73,7 +73,7 @@ brew install fd
 
 
 # Install Python with Anaconda
-ANACONDA_INSTALLER="Anaconda3-2020.02-Linux-x86_64.sh"
+ANACONDA_INSTALLER='Anaconda3-2020.02-Linux-x86_64.sh'
 wget "https://repo.continuum.io/archive/$ANACONDA_INSTALLER"
 bash $ANACONDA_INSTALLER
 rm $ANACONDA_INSTALLER

@@ -18,8 +18,8 @@ __conda_setup="$('/opt/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda/etc/profile.d/conda.sh"
+    if [ -f '/opt/anaconda/etc/profile.d/conda.sh' ]; then
+        . '/opt/anaconda/etc/profile.d/conda.sh'
     else
         export PATH="/opt/anaconda/bin:$PATH"
     fi
@@ -35,7 +35,7 @@ n ()
 {
     # Block nesting of nnn in subshells
     if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
-        echo "nnn is already running"
+        echo 'nnn is already running'
         return
     fi
 
@@ -75,15 +75,15 @@ source ~/kubectl.zsh
 export PATH=$PATH:~/bin
 
 # make diff look like git diff
-alias diff="colordiff -u"
+alias diff='colordiff -u'
 
 # confirmation prompt
-alias cp="cp -i"
-alias mv="mv -i"
-alias rm="rm -i"
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
 
+# Reverse mv
 mvr () {
-    # reverse mv
     mv $2 $1
 }
 
@@ -114,6 +114,8 @@ up() {
     cd "${cdir}"
 }
 
+alias my_ip='curl ifconfig.me'
+
 set_proxy () {
     export http_proxy=http://your_proxy;
     export https_proxy=$http_proxy;
@@ -123,5 +125,5 @@ set_proxy () {
 unset_proxy () {
     unset http_proxy;
     unset https_proxy;
-    echo "http_proxy and https_proxy successfully unset"
+    echo 'http_proxy and https_proxy successfully unset'
 }
