@@ -6,6 +6,12 @@
   "terminal.integrated.inheritEnv": false,
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vscode-icons",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
   "vsicons.dontShowNewVersionMessage": true,
   "extensions.ignoreRecommendations": false,
   "editor.cursorBlinking": "solid",
