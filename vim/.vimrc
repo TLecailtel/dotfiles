@@ -9,32 +9,32 @@ let mapleader=" " " Leader key is space
 
 call plug#begin()
 
+" Syntax and indent
+Plug 'editorconfig/editorconfig-vim' " Editorconfig support
+Plug 'yggdroot/indentline' " Show indentation levels
+Plug 'mechatroner/rainbow_csv' " CSV color coding
+Plug 'rust-lang/rust.vim' " Rust support
+
 " Search
 Plug 'haya14busa/incsearch.vim' " Better incremental search
 Plug 'haya14busa/incsearch-easymotion.vim' " Integration between incsearch and easymotion plugins, using <Leader>/
 Plug 'romainl/vim-cool' " Disable highlight when search is done
 
-" Filetype support
-Plug 'editorconfig/editorconfig-vim' " Editorconfig support
-Plug 'mechatroner/rainbow_csv' " CSV color coding
-Plug 'rust-lang/rust.vim' " Rust support
-
 " GUI
-Plug 'yggdroot/indentline' " Show indentation levels
 Plug 'itchyny/lightline.vim' " Better status line
 Plug 'luochen1990/rainbow' " Colorize parenthesis & html tag pairs
 Plug 'machakann/vim-highlightedyank' " Highlight yanks
 Plug 'andymass/vim-matchup' " Highlight corresponding blocks e.g. if - fi in bash
 Plug 'crusoexia/vim-monokai' " Monokai colorscheme
 
-" Editor
+" Edition
 Plug 'jiangmiao/auto-pairs' " Automatically append closing brackets, parentheses, quotes, ...
 Plug 'preservim/nerdcommenter' " Comment/uncomment lines using <Leader>c<Space>
 Plug 'matze/vim-move' " Move line/selection using <A-j> and <A-k>
 Plug 'terryma/vim-multiple-cursors' " Multiple cursors like Sublime Text, using <C-n>
 Plug 'tpope/vim-surround' " Operations on surroundings (parentheses, quotes, ...), using s
 
-" Navigation
+" Navigation and windows
 Plug 'preservim/nerdtree' " File explorer
 Plug 'easymotion/vim-easymotion' " Faster navigation with dynamic keybindings, using <Leader><Leader> as a prefix
 
@@ -54,6 +54,7 @@ set shiftwidth=4 " 1 tab == 4 spaces
 set tabstop=4
 set softtabstop=4
 set autoindent
+let g:vim_json_conceal = 0 " Disable quote concealing in JSON files
 
 
 "-------
@@ -91,7 +92,6 @@ set showcmd " Show command in bottom bar
 set showmatch " Show matching braces when text indicator is over them
 set shortmess+=I " Disable startup message
 set noshowmode " Hide mode (unnecessary because of lightline)
-let g:vim_json_conceal = 0 " Disable quote concealing in JSON files
 
 " Toggle relative numbering
 nnoremap <Leader>n :set rnu!<CR>
