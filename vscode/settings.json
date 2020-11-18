@@ -36,7 +36,7 @@
     "--disable=C"
   ],
   "python.formatting.provider": "black",
-  "python.dataScience.askForKernelRestart": false,
+  "jupyter.askForKernelRestart": false,
   "autoDocstring.docstringFormat": "google",
   "yaml.format.enable": true,
   "yaml.format.bracketSpacing": false,
@@ -51,6 +51,5 @@
     "markdown",
     "latex",
     "plaintext"
-  ],
-  "crates.upToDateDecorator": "✔️"
+  ]
 }
