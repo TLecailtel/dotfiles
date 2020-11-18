@@ -91,7 +91,7 @@ set showcmd " Show command in bottom bar
 set showmatch " Show matching braces when text indicator is over them
 set shortmess+=I " Disable startup message
 set noshowmode " Hide mode (unnecessary because of lightline)
-let g:indentLine_setConceal = 0 " Disable quote concealing in JSON files
+let g:vim_json_conceal = 0 " Disable quote concealing in JSON files
 
 " Toggle relative numbering
 nnoremap <Leader>n :set rnu!<CR>
