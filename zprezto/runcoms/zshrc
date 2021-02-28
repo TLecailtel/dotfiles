@@ -12,25 +12,28 @@ fi
 
 # Customize to your needs...
 
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/tlecailtel/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f '/opt/anaconda/etc/profile.d/conda.sh' ]; then
-        . '/opt/anaconda/etc/profile.d/conda.sh'
+    if [ -f "/home/tlecailtel/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/tlecailtel/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/anaconda/bin:$PATH"
+        export PATH="/home/tlecailtel/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# activate kubectl auto-completion for zsh
+
+# Activate kubectl auto-completion for zsh
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-# configure cd on quit for nnn when ^g is pressed
+
+# Configure cd on quit for nnn when ^g is pressed
 n ()
 {
     # Block nesting of nnn in subshells
@@ -64,40 +67,48 @@ export NNN_PLUG='p:preview-tui'
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPENER='bat'
 
-# use nnn with the following options:
+# Use nnn with the following options:
 # * use NNN_OPENER, and assume it has only CLI utilities
 # * copy selected filepaths to clipboard & show notis on cp/mv/rm,
 # * show hidden files
 alias n='n -cxH'
 
-# show hidden files in zsh completion
+
+# Show hidden files in zsh completion
 compinit
 _comp_options+=(globdots)
 
-# add kubectl context & namespace to prompt
+
+# Add kubectl context & namespace to prompt
 autoload -U colors; colors
 source ~/kubectl.zsh
 
-# add ~/bin to $PATH
+
+# Add ~/bin to $PATH
 export PATH=$PATH:~/bin
 
-# make diff look like git diff
+
+# Make diff look like git diff
 alias diff='colordiff -u'
 
-# confirmation prompt
+
+# Confirmation prompt
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+
 
 # Reverse mv
 mvr () {
     mv $2 $1
 }
 
+
 # Create a directory and cd into it
 mcd() {
     mkdir "${1}" && cd "${1}"
 }
+
 
 # Go up [n] directories
 up() {
@@ -121,13 +132,16 @@ up() {
     cd "${cdir}"
 }
 
+
 alias my_ip='curl ifconfig.me'
+
 
 set_proxy () {
     export http_proxy=http://your_proxy;
     export https_proxy=$http_proxy;
     echo "http_proxy and https_proxy set to: $http_proxy"
 }
+
 
 unset_proxy () {
     unset http_proxy;
