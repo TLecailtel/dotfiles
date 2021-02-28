@@ -1,5 +1,4 @@
-# Install zsh
-sudo apt install zsh
+# Choose zsh as default shell
 chsh -s /bin/zsh
 
 
@@ -12,71 +11,62 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 
-# Install brew
-sudo apt install build-essential
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# Install VS Code
+snap install code --classic
 
 
-# Install VS Code Server
-code .
-
-
-# Install vim-plug
+# Install vim and vim-plug
+pacman -Syu gvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
 # Install bat
-brew install bat
+pacman -Syu bat
+
 
 # Install tree
-brew install tree
-
-
-# Install shellcheck
-brew install shellcheck
+pacman -Syu tree
 
 
 # Install colordiff
-brew install colordiff
+pacman -Syu colordiff
 
 
 # Install jq
-brew install jq
+pacman -Syu jq
 
 
 # Install nnn
-brew install nnn
+pacman -Syu nnn
 curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
 
 
-# Install tldr
-brew install tldr
-
-
 # Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  # WSL2
-# curl https://sh.rustup.rs -sSf | sh  # UNIX
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup component add rls rust-analysis rust-src
-sudo apt install pkg-config libssl-dev cmake libclang
+
+
+# Install tldr
+cargo install tealdeer
 
 
 # Install ripgrep
-brew install ripgrep
+pacman -Syu ripgrep
 
 
 # Install fd
-brew install fd
+pacman -Syu fd
 
 
-# Install Python with Anaconda
-ANACONDA_INSTALLER='Anaconda3-2020.02-Linux-x86_64.sh'
-wget "https://repo.continuum.io/archive/$ANACONDA_INSTALLER"
-bash $ANACONDA_INSTALLER
-rm $ANACONDA_INSTALLER
+# Install Python with Miniconda
+MINICONDA_INSTALLER='Miniconda3-latest-Linux-x86_64.sh'
+wget "https://repo.anaconda.com/miniconda/$MINICONDA_INSTALLER"
+bash $MINICONDA_INSTALLER
+rm $MINICONDA_INSTALLER
 
 
 # Install k9s
-brew install derailed/k9s/k9s
+pacman -Syu k9s
 
 
 # Install kubectl prompt
