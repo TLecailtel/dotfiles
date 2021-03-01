@@ -2,7 +2,7 @@
 chsh -s /bin/zsh
 
 
-# Install prezto
+# Install Prezto
 zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
@@ -15,7 +15,7 @@ done
 snap install code --classic
 
 
-# Install vim and vim-plug
+# Install Vim and VimPlug
 pacman -Syu gvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -63,6 +63,11 @@ MINICONDA_INSTALLER='Miniconda3-latest-Linux-x86_64.sh'
 wget "https://repo.anaconda.com/miniconda/$MINICONDA_INSTALLER"
 bash $MINICONDA_INSTALLER
 rm $MINICONDA_INSTALLER
+
+
+# Install Docker and start it on boot
+pacman -Syu docker
+sudo systemctl enable docker.service
 
 
 # Install Kubernetes

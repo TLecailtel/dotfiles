@@ -29,6 +29,10 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
+# Autologout on consoles
+if [[ "$(tty)" =~ /dev/tty[0-9] ]]; then export TMOUT=900;fi
+
+
 # Activate kubectl auto-completion for zsh
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
@@ -82,10 +86,6 @@ _comp_options+=(globdots)
 # Add kubectl context & namespace to prompt
 autoload -U colors; colors
 source ~/kubectl.zsh
-
-
-# Add ~/bin to $PATH
-export PATH=$PATH:~/bin
 
 
 # Make diff look like git diff
