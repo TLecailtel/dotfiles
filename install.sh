@@ -65,9 +65,10 @@ bash $MINICONDA_INSTALLER
 rm $MINICONDA_INSTALLER
 
 
-# Install Docker and start it on boot
+# Install Docker, start it on boot, and make the docker command usable as a non-root user (dangerous)
 pacman -Syu docker
 sudo systemctl enable docker.service
+sudo gpasswd -a tlecailtel docker
 
 
 # Install Kubernetes
