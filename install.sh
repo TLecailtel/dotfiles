@@ -16,28 +16,28 @@ snap install code --classic
 
 
 # Install Vim and VimPlug
-pacman -Syu gvim
+sudo pacman -Syu gvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
 # Install bat
-pacman -Syu bat
+sudo pacman -Syu bat
 
 
 # Install tree
-pacman -Syu tree
+sudo pacman -Syu tree
 
 
 # Install colordiff
-pacman -Syu colordiff
+sudo pacman -Syu colordiff
 
 
 # Install jq
-pacman -Syu jq
+sudo pacman -Syu jq
 
 
 # Install nnn
-pacman -Syu nnn
+sudo pacman -Syu nnn
 curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
 
 
@@ -51,11 +51,11 @@ cargo install tealdeer
 
 
 # Install ripgrep
-pacman -Syu ripgrep
+sudo pacman -Syu ripgrep
 
 
 # Install fd
-pacman -Syu fd
+sudo pacman -Syu fd
 
 
 # Install Python with Miniconda
@@ -65,8 +65,12 @@ bash $MINICONDA_INSTALLER
 rm $MINICONDA_INSTALLER
 
 
+# Install JupyterLab and create desktop shortcut
+conda install -c conda-forge jupyterlab
+
+
 # Install Docker, start it on boot, and make the docker command usable as a non-root user (dangerous)
-pacman -Syu docker
+sudo pacman -Syu docker
 sudo systemctl enable docker.service
 sudo gpasswd -a tlecailtel docker
 
@@ -78,7 +82,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 
 
 # Install k9s
-pacman -Syu k9s
+sudo pacman -Syu k9s
 
 
 # Install kubectl prompt

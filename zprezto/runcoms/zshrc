@@ -73,9 +73,10 @@ export NNN_OPENER='bat'
 
 # Use nnn with the following options:
 # * use NNN_OPENER, and assume it has only CLI utilities
+# * detail mode
 # * copy selected filepaths to clipboard & show notis on cp/mv/rm,
 # * show hidden files
-alias n='n -cxH'
+alias n='n -cdxH'
 
 
 # Show hidden files in zsh completion

@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Terminal=true
+Name=JupyterLab
+Comment=Start JupyterLab in the terminal and show localhost:8888/lab in a new browser tab
+Exec=bash -c '/home/tlecailtel/miniconda3/bin/jupyter-lab;$SHELL'
+Icon=jupyter.ico
