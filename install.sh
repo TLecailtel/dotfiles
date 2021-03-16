@@ -65,7 +65,7 @@ bash $MINICONDA_INSTALLER
 rm $MINICONDA_INSTALLER
 
 
-# Install JupyterLab and create desktop shortcut
+# Install JupyterLab
 conda install -c conda-forge jupyterlab
 
 
