@@ -38,6 +38,9 @@ sudo pacman -Syu jq
 
 # Install nnn
 sudo pacman -Syu nnn
+git clone git@github.com:jarun/nnn.git "$HOME/.nnn"
+cd $HOME/.nnn; make 0_NERD=1
+sudo cp nnn /bin/
 curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
 
 
