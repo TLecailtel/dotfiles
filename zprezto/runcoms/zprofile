@@ -55,7 +55,4 @@ path=(
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
 # export LESS='-F -g -i -M -R -S -w -X -z-4'
-export LESS='-g -i -M -R -w -z-4'
-
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-export PATH="$HOME/.cargo/bin:$PATH"
+export LESS='-F -g -i -M -R -w -z-4 --mouse'
