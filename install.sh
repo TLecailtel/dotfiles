@@ -24,24 +24,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 sudo pacman -Syu bat
 
 
-# Install tree
-sudo pacman -Syu tree
-
-
 # Install colordiff
 sudo pacman -Syu colordiff
 
 
 # Install jq
 sudo pacman -Syu jq
-
-
-# Install nnn
-sudo pacman -Syu nnn
-git clone git@github.com:jarun/nnn.git "$HOME/.nnn"
-cd $HOME/.nnn; make 0_NERD=1
-sudo cp nnn /bin/
-curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
 
 
 # Install Rust

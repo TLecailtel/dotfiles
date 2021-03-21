@@ -37,48 +37,6 @@ if [[ "$(tty)" =~ /dev/tty[0-9] ]]; then export TMOUT=900;fi
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 
-# Configure cd on quit for nnn when ^g is pressed
-n ()
-{
-    # Block nesting of nnn in subshells
-    if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
-        echo 'nnn is already running'
-        return
-    fi
-
-    # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
-    # To cd on quit only on ^G, remove the "export" as in:
-    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-    # NOTE: NNN_TMPFILE is fixed, should not be modified
-    # export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-    NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-
-    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
-    # stty start undef
-    # stty stop undef
-    # stty lwrap undef
-    # stty lnext undef
-
-    nnn "$@"
-
-    if [ -f "$NNN_TMPFILE" ]; then
-            . "$NNN_TMPFILE"
-            rm -f "$NNN_TMPFILE" > /dev/null
-    fi
-}
-
-export NNN_PLUG='p:preview-tui'
-export NNN_FIFO='/tmp/nnn.fifo'
-export NNN_OPENER='bat'
-
-# Use nnn with the following options:
-# * use NNN_OPENER, and assume it has only CLI utilities
-# * detail mode
-# * copy selected filepaths to clipboard & show notis on cp/mv/rm,
-# * show hidden files
-alias n='n -cdxH'
-
-
 # Show hidden files in zsh completion
 compinit
 _comp_options+=(globdots)
@@ -132,6 +90,9 @@ up() {
     fi
     cd "${cdir}"
 }
+
+
+alias n=ranger
 
 
 alias my_ip='curl ifconfig.me'
