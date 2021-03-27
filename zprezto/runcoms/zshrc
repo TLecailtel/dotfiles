@@ -29,6 +29,25 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
+# Press capital Q to "cd on quit" ranger
+function ranger {
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command rm -f -- "$tempfile" 2>/dev/null
+}
+alias n=ranger
+
+
 # Autologout on consoles
 if [[ "$(tty)" =~ /dev/tty[0-9] ]]; then export TMOUT=900;fi
 
@@ -90,9 +109,6 @@ up() {
     fi
     cd "${cdir}"
 }
-
-
-alias n=ranger
 
 
 alias my_ip='curl ifconfig.me'
