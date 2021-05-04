@@ -42,6 +42,7 @@
     "--disable=C"
   ],
   "python.formatting.provider": "black",
+  "jupyter.alwaysTrustNotebooks": true,
   "jupyter.askForKernelRestart": false,
   "autoDocstring.docstringFormat": "google",
   "yaml.format.enable": true,
