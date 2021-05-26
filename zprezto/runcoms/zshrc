@@ -13,6 +13,10 @@ fi
 # Customize to your needs...
 
 
+# Disable Python venv prompt (I already use the one from Prezto)
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/tlecailtel/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

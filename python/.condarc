@@ -1,1 +1,2 @@
+# Disable conda env prompt (I already use the one from Prezto)
 changeps1: false
