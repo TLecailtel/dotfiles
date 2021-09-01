@@ -47,7 +47,7 @@ sudo pacman -Syu ripgrep
 
 
 # Install yay (AUR helper)
-sudo pacman -Syu yay
+sudo pacman -Syu yay base-devel
 
 
 # Install ripgrep-all (ripgrep for more filetypes)
