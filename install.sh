@@ -16,6 +16,12 @@ sudo ln -s /var/lib/snapd/snap /snap
 snap install code --classic
 
 
+# Install Sublime Text
+curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
+echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee -a /etc/pacman.conf
+sudo pacman -Syu sublime-text
+
+
 # Install Vim and VimPlug (text editor and a plugin manager)
 sudo pacman -Syu gvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
