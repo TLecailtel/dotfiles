@@ -53,6 +53,10 @@ sudo pacman -Syu yay
 yay -S ripgrep-all
 
 
+# Install Microsoft Teams
+yay -S teams
+
+
 # Install fd (find alternative)
 sudo pacman -Syu fd
 
