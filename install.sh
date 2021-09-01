@@ -12,6 +12,7 @@ done
 
 
 # Install VS Code (IDE)
+sudo ln -s /var/lib/snapd/snap /snap
 snap install code --classic
 
 
