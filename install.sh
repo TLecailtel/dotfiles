@@ -52,16 +52,12 @@ cargo install tealdeer
 sudo pacman -Syu ripgrep
 
 
-# Install yay (AUR helper)
-sudo pacman -Syu yay base-devel
-
-
 # Install ripgrep-all (ripgrep for more filetypes)
-yay -S ripgrep-all
+sudo pamac install ripgrep-all
 
 
 # Install Microsoft Teams
-yay -S teams
+sudo pamac install teams
 
 
 # Install fd (find alternative)
