@@ -8,9 +8,11 @@ bungcip.better-toml
 christian-kohler.path-intellisense
 CoenraadS.bracket-pair-colorizer-2
 EditorConfig.EditorConfig
+hashicorp.terraform
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
@@ -24,3 +26,4 @@ vscode-icons-team.vscode-icons
 waderyan.gitblame
 yzhang.markdown-all-in-one
 zxh404.vscode-proto3
+
