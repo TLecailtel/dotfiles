@@ -64,15 +64,13 @@ sudo pamac install teams
 sudo pacman -Syu fd
 
 
-# Install Python with Miniconda (Python environment manager)
-MINICONDA_INSTALLER='Miniconda3-latest-Linux-x86_64.sh'
-wget "https://repo.anaconda.com/miniconda/$MINICONDA_INSTALLER"
-bash $MINICONDA_INSTALLER
-rm $MINICONDA_INSTALLER
-
-
-# Install JupyterLab (notebook IDE)
-conda install -c conda-forge jupyterlab
+# Install Python and JupyterLab
+sudo pacman -Syu python
+python -m pip install jupyterlab
+mkdir -p ~/venv/myenv
+python -m venv ~/venv/myenv
+source ~/venv/myenv/bin/activate
+ipython kernel install --name "myenv" --user
 
 
 # Install Docker (container manager), start it on boot, and make the docker command usable as a non-root user (dangerous)

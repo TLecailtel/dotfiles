@@ -143,12 +143,6 @@ zstyle ':prezto:module:prompt' theme 'tlecailtel'
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 # zstyle ':prezto:module:python:virtualenv' initialize 'yes'
 
-# Disable virtualenvwrapper
-zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
-
-# Enable conda support
-zstyle ':prezto:module:python' conda-init 'on'
-
 #
 # Ruby
 #
