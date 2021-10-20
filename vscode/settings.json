@@ -4,8 +4,11 @@
   "window.zoomLevel": 0,
   "terminal.integrated.defaultProfile.linux": "/bin/zsh",
   "terminal.integrated.inheritEnv": false,
+  "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vscode-icons",
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
   "workbench.editorAssociations": [
     {
       "viewType": "jupyter.notebook.ipynb",
