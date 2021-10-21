@@ -70,7 +70,8 @@ python -m pip install jupyterlab
 mkdir -p ~/venv/myenv
 python -m venv ~/venv/myenv
 source ~/venv/myenv/bin/activate
-ipython kernel install --name "myenv" --user
+python -m pip install ipykernel
+python -m ipykernel install --name "myenv" --user
 
 
 # Install Docker (container manager), start it on boot, and make the docker command usable as a non-root user (dangerous)
