@@ -13,7 +13,11 @@ done
 
 # Install VS Code (IDE)
 sudo ln -s /var/lib/snapd/snap /snap
-snap install code --classic
+sudo snap install code --classic
+
+
+# Install Microsoft Teams
+sudo snap install teams
 
 
 # Install Sublime Text
@@ -54,10 +58,6 @@ sudo pacman -Syu ripgrep
 
 # Install ripgrep-all (ripgrep for more filetypes)
 sudo pamac install ripgrep-all
-
-
-# Install Microsoft Teams
-sudo pamac install teams
 
 
 # Install fd (find alternative)
