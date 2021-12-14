@@ -1,20 +1,16 @@
 {
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
   "window.zoomLevel": 0,
-  "terminal.integrated.defaultProfile.linux": "/bin/zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.inheritEnv": false,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vscode-icons",
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
   "vsicons.dontShowNewVersionMessage": true,
   "extensions.ignoreRecommendations": false,
   "editor.cursorBlinking": "solid",
@@ -25,6 +21,8 @@
   "editor.rulers": [
     88
   ],
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
   "files.eol": "\n",
   "files.associations": {
     "zpreztorc": "shellscript",
@@ -37,20 +35,11 @@
   "git.showPushSuccessNotification": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "python.terminal.activateEnvironment": false,
-  "python.showStartPage": false,
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintUseMinimalCheckers": false,
-  "python.linting.pylintArgs": [
-    "--disable=C"
-  ],
   "python.formatting.provider": "black",
-  "jupyter.alwaysTrustNotebooks": true,
   "jupyter.askForKernelRestart": false,
   "autoDocstring.docstringFormat": "google",
   "yaml.format.enable": true,
   "yaml.format.bracketSpacing": false,
-  "bracket-pair-colorizer-2.highlightActiveScope": true,
   "remote.SSH.remotePlatform": {
     "your_vm": "linux"
   },
@@ -61,5 +50,9 @@
     "markdown",
     "latex",
     "plaintext"
-  ]
+  ],
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  }
 }
