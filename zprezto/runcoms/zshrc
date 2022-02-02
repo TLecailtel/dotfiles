@@ -54,8 +54,8 @@ autoload -U colors; colors
 source ~/kubectl.zsh
 
 
-# Make diff look like git diff
-alias diff='colordiff -u'
+# Add colors & highlights to diff, using: 'diff -u file1.txt file2.txt | dsf'
+alias dsf=diff-so-fancy
 
 
 # Confirmation prompt

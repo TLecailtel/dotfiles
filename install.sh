@@ -35,8 +35,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 sudo pacman -Syu bat
 
 
-# Install colordiff (diff alternative)
-sudo pacman -Syu colordiff
+# Install diff-so-fancy (diff enhancer) and use it for git
+sudo pacman -Syu diff-so-fancy
+diff-so-fancy --set-defaults
 
 
 # Install jq (JSON processor)
@@ -70,7 +71,7 @@ python -m pip install jupyterlab
 mkdir -p ~/venv/myenv
 python -m venv ~/venv/myenv
 source ~/venv/myenv/bin/activate
-python -m pip install ipykernel
+python -m pip install --upgrade pip ipykernel
 python -m ipykernel install --name "myenv" --user
 
 
