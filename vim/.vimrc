@@ -54,7 +54,8 @@ set shiftwidth=4 " 1 tab == 4 spaces
 set tabstop=4
 set softtabstop=4
 set autoindent
-let g:vim_json_conceal = 0 " Disable quote concealing in JSON files
+let g:vim_json_conceal = 0 " Disable concealing in JSON files
+let g:markdown_syntax_conceal = 0 " Disable concealing in Markdown files
 
 
 "-------
