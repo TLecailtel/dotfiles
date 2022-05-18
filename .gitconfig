@@ -1,0 +1,32 @@
+[user]
+	name = Thibault Lecailtel
+    email = thibault.lecailtel@[mail].com
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[delta]
+    line-numbers = true
+    navigate = true
+    side-by-side = true
+    features = styles
+
+[delta "styles"]
+    file-style = bold yellow
+    file-decoration-style = yellow box ul
+    hunk-header-style = omit
+    minus-style = syntax "#3f0001"
+    minus-non-emph-style = syntax "#3f0001"
+    minus-emph-style = syntax "#901011"
+    line-numbers-left-style = grey
+    line-numbers-right-style = grey
+

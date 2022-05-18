@@ -49,13 +49,13 @@ compinit
 _comp_options+=(globdots)
 
 
+# Enable zoxide (cd alternative)
+eval "$(zoxide init zsh)"
+
+
 # Add kubectl context & namespace to prompt
 autoload -U colors; colors
 source ~/kubectl.zsh
-
-
-# Add colors & highlights to diff, using: 'diff -u file1.txt file2.txt | dsf'
-alias dsf=diff-so-fancy
 
 
 # Confirmation prompt
@@ -71,31 +71,8 @@ mvr () {
 
 
 # Create a directory and cd into it
-mcd() {
+mkcd() {
     mkdir "${1}" && cd "${1}"
-}
-
-
-# Go up [n] directories
-up() {
-    local cdir="$(pwd)"
-    if [[ "${1}" == "" ]]; then
-        cdir="$(dirname "${cdir}")"
-    elif ! [[ "${1}" =~ ^[0-9]+$ ]]; then
-        echo "Error: argument must be a number"
-    elif ! [[ "${1}" -gt "0" ]]; then
-        echo "Error: argument must be positive"
-    else
-        for ((i=0; i<${1}; i++)); do
-            local ncdir="$(dirname "${cdir}")"
-            if [[ "${cdir}" == "${ncdir}" ]]; then
-                break
-            else
-                cdir="${ncdir}"
-            fi
-        done
-    fi
-    cd "${cdir}"
 }
 
 

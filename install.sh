@@ -35,9 +35,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 sudo pacman -Syu bat
 
 
-# Install diff-so-fancy (diff enhancer) and use it for git
-sudo pacman -Syu diff-so-fancy
-diff-so-fancy --set-defaults
+# Install delta (diff and git diff alternative)
+sudo pacman -Syu git-delta
 
 
 # Install jq (JSON processor)
@@ -51,6 +50,10 @@ rustup component add rls rust-analysis rust-src
 
 # Install tldr (man alternative)
 cargo install tealdeer
+
+
+# Install zoxide (cd alternative)
+cargo install zoxide --locked
 
 
 # Install ripgrep (grep alternative)
