@@ -44,6 +44,10 @@ if [[ "$(tty)" =~ /dev/tty[0-9] ]]; then export TMOUT=900;fi
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 
+# Don't suggest command corrections
+unsetopt CORRECT
+
+
 # Show hidden files in zsh completion
 compinit
 _comp_options+=(globdots)
@@ -76,6 +80,7 @@ mkcd() {
 }
 
 
+alias c='clear'
 alias my_ip='curl ifconfig.me'
 
 
