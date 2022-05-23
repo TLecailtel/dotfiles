@@ -37,6 +37,7 @@ Plug 'tpope/vim-surround' " Operations on surroundings (parentheses, quotes, ...
 " Navigation and windows
 Plug 'preservim/nerdtree' " File explorer
 Plug 'easymotion/vim-easymotion' " Faster navigation with dynamic keybindings, using <Leader><Leader> as a prefix
+Plug 'chaoren/vim-wordmotion' " More motion within words with w, b, e. Default nav is still accessible with W, B, E
 
 call plug#end()
 
