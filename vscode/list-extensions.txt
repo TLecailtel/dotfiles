@@ -20,9 +20,8 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 njpwerner.autodocstring
 redhat.vscode-yaml
-rust-lang.rust
+rust-lang.rust-analyzer
 serayuzgur.crates
-tht13.html-preview-vscode
 timonwong.shellcheck
 Tobermory.es6-string-html
 vscode-icons-team.vscode-icons
