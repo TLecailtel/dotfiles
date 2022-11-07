@@ -1,0 +1,24 @@
+name: tlecailtel
+image: your_image:your_tag
+workdir: /code
+sync:
+- .:/code/
+- ~/.ssh/:/root/.ssh/
+command: start-notebook.sh # to be included in your_image
+forward:
+- 8080:8080
+autocreate: true
+volumes:
+- /root/
+externalVolumes:
+- tlecailtel-perso:/data
+resources:
+  requests:
+    memory: "16Gi"
+    cpu: "8"
+    nvidia.com/gpu: "1"
+  limits:
+    memory: "16Gi"
+    cpu: "8"
+    nvidia.com/gpu: "1"
+
