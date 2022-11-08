@@ -3,7 +3,7 @@ image: your_image:your_tag
 workdir: /code
 sync:
 - .:/code/
-- ~/.ssh/:/root/.ssh/
+- $HOME/.ssh/:/root/.ssh/
 command: start-notebook.sh # to be included in your_image
 forward:
 - 8080:8080

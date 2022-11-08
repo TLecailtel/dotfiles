@@ -35,6 +35,9 @@
   "git.fetchOnPull": true,
   "git.enableSmartCommit": true,
   "git.showPushSuccessNotification": true,
+  "remote.SSH.remotePlatform": {
+    "your_vm": "linux"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "python.terminal.activateEnvironment": false,
   "python.formatting.provider": "black",
@@ -42,17 +45,6 @@
   "autoDocstring.docstringFormat": "google",
   "yaml.format.enable": true,
   "yaml.format.bracketSpacing": false,
-  "remote.SSH.remotePlatform": {
-    "your_vm": "linux"
-  },
-  "spellright.language": [
-    "en"
-  ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext"
-  ],
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"

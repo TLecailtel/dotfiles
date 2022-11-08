@@ -2,7 +2,6 @@
 # to install one (e.g. python), use the command: code --install-extension ms-python.python
 
 aeschli.vscode-css-formatter
-ban.spellright
 bierner.markdown-mermaid
 bungcip.better-toml
 christian-kohler.path-intellisense
