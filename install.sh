@@ -83,7 +83,7 @@ python -m ipykernel install --name "myenv" --user
 
 
 # Install Docker (container manager), start it on boot, and make the docker command usable as a non-root user (dangerous)
-sudo pacman -Syu docker
+sudo pacman -Syu docker docker-compose docker-buildx
 sudo systemctl enable docker.service
 sudo gpasswd -a tlecailtel docker
 
