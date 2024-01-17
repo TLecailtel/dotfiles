@@ -17,12 +17,14 @@
   "editor.codeLens": false,
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "block",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
   "editor.formatOnSave": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "selection",
-  "editor.rulers": [
-    88
-  ],
+  "editor.rulers": [88],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "files.eol": "\n",
@@ -40,7 +42,6 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "python.terminal.activateEnvironment": false,
-  "python.formatting.provider": "black",
   "jupyter.askForKernelRestart": false,
   "autoDocstring.docstringFormat": "google",
   "yaml.format.enable": true,
@@ -52,5 +53,6 @@
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.inlayHints.closingBraceHints.enable": false
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "svelte.enable-ts-plugin": true
 }

@@ -98,9 +98,5 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 sudo pacman -Syu k9s
 
 
-# Install Okteto (tool to develop in a container)
-curl https://get.okteto.com -sSfL | sh
-
-
 # Install kubectl prompt (Kubernetes context in prompt)
 curl -O https://raw.githubusercontent.com/superbrothers/zsh-kubectl-prompt/master/kubectl.zsh
