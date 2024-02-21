@@ -63,6 +63,7 @@ mkcd() {
 
 alias c='clear'
 alias my_ip='curl ifconfig.me'
+alias disk='du -hd1 | sort -rh'  # disk usage sorted desc, human-readable
 
 
 set_proxy () {
