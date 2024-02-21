@@ -17,8 +17,10 @@ fi
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 
-# Change cache location, if space in /home is limited
+# Change cache locations, if space in /home is limited
 export XDG_CACHE_HOME=/shared/tlecailtel/.cache
+export RUSTUP_HOME=/shared/tlecailtel/.rustup  # Rust installer
+export CARGO_HOME=/shared/tlecailtel/.cargo  # Rust package manager
 
 
 # Activate kubectl auto-completion for zsh
