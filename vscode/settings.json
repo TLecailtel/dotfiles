@@ -21,6 +21,9 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
+  "[markdown]": {
+    "editor.defaultFormatter": null
+  },
   "editor.formatOnSave": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "selection",
