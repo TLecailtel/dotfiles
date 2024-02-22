@@ -50,7 +50,7 @@ sudo pacman -Syu jq
 # Install Csvdiff (diff of CSV files)
 curl -sfL https://raw.githubusercontent.com/aswinkarthik/csvdiff/master/install.sh | sh -s
 sudo mv ./bin/csvdiff /usr/local/bin/csvdiff
-rmdir bin
+rmdir ./bin
 
 
 # Install Rust (programming language)
