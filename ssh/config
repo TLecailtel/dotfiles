@@ -3,14 +3,22 @@ Host [jumpserver_shortname]
     Hostname [jumpserver_ip_or_dns]
     ProxyCommand none
 
-# Restrict the use of the jump server for specific domains only
-Host [*.specific_domain] ![jumpserver_ip_or_dns]
-    ProxyJump [jumpserver_shortname]
-
+# Connect to a specific server
 Host [server_shortname]
     HostName [server_ip_or_dns]
+    ProxyJump [jumpserver_shortname]
     User tlecailtel
     IdentityFile ~/.ssh/[private_key]
     ForwardAgent yes
     ForwardX11 yes
     ForwardX11Trusted yes
+
+# Connect to any server of a specific domain
+Host *.[specific_domain] ![jumpserver_ip_or_dns]
+    ProxyJump [jumpserver_shortname]
+    User tlecailtel
+    IdentityFile ~/.ssh/[private_key]
+    ForwardAgent yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
