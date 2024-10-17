@@ -3,6 +3,7 @@
   "redhat.telemetry.enabled": false,
   "window.zoomLevel": 0,
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
   "terminal.integrated.inheritEnv": false,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorTheme": "Monokai",
@@ -56,6 +57,6 @@
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
-  "svelte.enable-ts-plugin": true
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false
 }
+
